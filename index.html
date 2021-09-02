@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Formulário de Cadastro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <style type="text/css">
+            #conteiner{
+                width: 500px;
+            }
+            #botao{
+	            background-color: #ff1168;
+	            color: #ffffff;
+	            font-weight: bold;
+	        }
+        </style>
+    </head>
+    <body>
+        <div class="container" id="conteiner" style="margin-top: 40px">
+        
+        	 <h4>Formulário de Cadastro</h4>
+         	 <form style="margin-top: 25px" action="_inserir_produto.php" method="post">
+          
+	            <div class="mb-3">
+	              <label class="form-label">Número do Produto</label>
+	              <input type="number" name="nrproduto" class="form-control" placeholder="Insira o número do produto">
+	            </div>
+              
+	            <div class="mb-3">
+	              <label class="form-label">Nome Produto</label>
+	              <input type="text" class="form-control" name="produto" placeholder="Insira o nome do produto">
+	            </div>
+              
+	            <div class="mb-3">
+	              <label class="form-label">Quantidade</label>
+	              <input type="number" class="form-control" name="quantidade" placeholder="Insira a quantidade">
+	            </div>
+            
+	            <div class="mb-3">  
+	                <label class="form-label">Categorias</label>
+	                <select name="categoria" class="form-select" >
+	                    <option value="1">Periféricos</option>
+	                    <option value="2">Hardwares</option>
+	                    <option value="3">Celulares</option>
+	                    <option value="4">Softwares</option>
+	                    <option value="5">Outros</option>
+	                </select>
+	            </div>    
+              
+	            <div class="mb-3">  
+	                <label  class="form-label">Fornecedore</label>
+	                <select name="fornecedor" class="form-select" >
+	                    <option value="1">Fornecedo A</option>
+	                    <option value="2">Fornecedo B</option>
+	                    <option value="3">Fornecedo C</option>
+	                </select>
+	            </div>
+            
+	            <div style="text-align: right;">  
+	            	<button id="botao" type="submit" class="btn btn-primary btn-sm">Enviar</button>
+	            </div>
+            
+          	</form>
+        </div>
+        
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+    </body>
+</html>
