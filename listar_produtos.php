@@ -18,6 +18,7 @@
                   <th scope="col">Categoria</th>
                   <th scope="col">Quantidade</th>
                   <th scope="col">Fornecedor</th>
+                  <th scope="col">Ação</th>
                 </tr>
               </thead>
               <tbody>
@@ -34,14 +35,16 @@
                         $fornecedor = $array['fornecedor'];
                     
                   ?>
-                 <tr>
-                  <td><?php echo $nr_produtos ?></td>
-                  <td><?php echo $nome_produto ?></td>
-                  <td><?php echo $categoria ?></td>
-                  <td><?php echo $quantidade ?></td>
-                  <td><?php echo $fornecedor ?></td>
+                     <tr>
+                          <td><?php echo $nr_produtos ?></td>
+                          <td><?php echo $nome_produto ?></td>
+                          <td><?php echo $categoria ?></td>
+                          <td><?php echo $quantidade ?></td>
+                          <td><?php echo $fornecedor ?></td>
+                          <td><a class="btn btn-warning btn-sm" href="editar_produto.php?id=<?php echo $id_estoque?>" role="button">Editar</a></td>
+                     </tr>
                   <?php } ?>
-                </tr>
+                
               </tbody>
             </table>
     		
