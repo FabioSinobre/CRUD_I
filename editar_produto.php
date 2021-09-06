@@ -27,7 +27,7 @@ $id = $_GET['id'];
         <div class="container" id="conteiner" style="margin-top: 40px">
         
         	 <h4>Formulário de Cadastro</h4>
-         	 <form style="margin-top: 25px" action="_inserir_produto.php" method="post">
+         	 <form style="margin-top: 25px" action="_atualizar_produto.php" method="post">
           		<?php 
           		    $sql = "SELECT * FROM `_estoque` WHERE id_estoque = $id";
           		    $buscar = mysqli_query($conexao, $sql);
@@ -41,26 +41,25 @@ $id = $_GET['id'];
                         $fornecedor = $array['fornecedor'];
           		?>
           		    
-                
-          		
 	            <div class="mb-3">
 	              <label class="form-label">Número do Produto</label>
 	              <input type="number" name="nrproduto" class="form-control" value="<?php echo $nr_produtos ?>" disabled>
+	              <input type="number" name="id" class="form-control" value="<?php echo $id ?>" style="display: none">
 	            </div>
               
 	            <div class="mb-3">
 	              <label class="form-label">Nome Produto</label>
-	              <input type="text" class="form-control" name="produto" placeholder="Insira o nome do produto" required autocomplete="off">
+	              <input type="text" class="form-control" name="produto" value="<?php echo $nome_produto?>">
 	            </div>
               
 	            <div class="mb-3">
 	              <label class="form-label">Quantidade</label>
-	              <input type="number" class="form-control" name="quantidade" placeholder="Insira a quantidade" required autocomplete="off">
+	              <input type="number" class="form-control" name="quantidade" value="<?php echo $quantidade?>">
 	            </div>
             
 	            <div class="mb-3">  
 	                <label class="form-label">Categorias</label>
-	                <select name="categoria" class="form-select">
+	                <select name="categoria" class="form-select" value="<?php echo $categoria?>";>
 	                    <option>Periféricos</option>
 	                    <option>Hardwares</option>
 	                    <option>Celulares</option>
@@ -71,7 +70,7 @@ $id = $_GET['id'];
               
 	            <div class="mb-3">  
 	                <label  class="form-label">Fornecedore</label>
-	                <select name="fornecedor" class="form-select">
+	                <select name="fornecedor" class="form-select" value="<?php echo $fornecedor?>";>
 	                    <option>Fornecedo A</option>
 	                    <option>Fornecedo B</option>
 	                    <option>Fornecedo C</option>
